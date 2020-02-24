@@ -1,0 +1,21 @@
+#! /bin/bash
+
+if [ "$1" == "" ]
+then
+	echo "Error: Invalid Usage ... "
+	echo "Hint: Filename missing !"
+	exit 1
+fi
+
+
+echo "#! /bin/bash" 				> $1
+echo "########################################" >> $1
+echo -e "#Author:\t\tRahul Verma"		>> $1
+echo -e "#Filename:\t\t$1"			>> $1
+echo -e "#Description:\t\t"			>> $1
+echo "########################################" >> $1
+
+echo "Script \"$1\"Created."
+chmod +x $1
+exit 0
+
